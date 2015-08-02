@@ -37,7 +37,149 @@
           <h1>
 <a id="fogcutter" class="anchor" href="#fogcutter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fogcutter</h1>
 
-<p>The Fogcutter Suite - smart tools for collaboration and knowledge management</p>
+	  <p>The Fogcutter Suite - smart tools for collaboration and knowledge management</p>
+
+
+
+	  <h2> What is it?</h2>
+
+	  Fogcutter is an umbrella project, sponsored by <a href="http://www.fogbeam.com">Fogbeam Labs</a>, which is building a suite of powerful, open-source tools for knowledge management and collaboration.
+
+	  <h2>Why "Fogcutter?"</h2>
+
+	  Fogbeam'ers like light and things related to light... our projects are about, as we like to say, "cutting through the information fog."  We like to build tools to help people find, share, reuse and create knowledge out of the raw data and unstructured information they have in their organizations.  So "fogcutter" gets to the core of what we are all about.  And it sounds cool to boot.
+
+	  <h2>Tell Me More</h2>
+
+
+	  The 65,000 foot overview description would go something like this:
+
+	  <blockquote>
+	    "Fogcutter is an open-source suite of APIs, components and applications - driven by the principles of federation, composition,  open protocols, and open standards - for building and enabling intelligent enterprise applications for collaboration,  social-networking, <a target="_blank" href="http://en.wikipedia.org/wiki/Knowledge_management">knowledge management</a> and discovery, <a target="_blank" href="http://en.wikipedia.org/wiki/Organizational_learning">organizational learning</a>, <a target="_blank" href="http://en.wikipedia.org/wiki/Information_retrieval">Information Retrieval</a> and <a target="_blank" href="http://en.wikipedia.org/wiki/Decision_support_system">decision support</a>."
+	  </blockquote>
+
+	  Fogcutter proper, then, is an "umbrella project" or over-arching structure for sub-projects that handle  different parts of this vision.  Think of how <a target="_blank" href="https://glassfish.dev.java.net/">Glassfish</a> has become an  "umbrella" project for a series of related projects: <a target="_blank" href="https://mq.dev.java.net/">OpenMQ</a>, <a target="_blank" href="https://open-esb.dev.java.net/">OpenESB</a>, <a target="_blank" href="https://sailfin.dev.java.net/">!SailFin</a>,  <a target="_blank" href="https://portal.dev.java.net/">Portal Server</a>, etc.
+
+	  <p />
+	  With Fogcutter as the overall encompassing framework, sub-projects will deal with provide various APIs and/or applications / subsystems that are  part of this overall "intelligent application" vision.
+
+	  Subprojects will deal with things like: an API / system for managing tags, recommendations engine, mechanism for dealing with voting/ranking things, something for managing a social graph and allowing queries against it, etc.
+
+	  Of course, as before, in a lot of areas existing open-source code exists to do these things.  In that case, we may  (within the letter and spirit of the respective licenses) just "borrow" existing code, possibly wrapping or modifying it to  fit the model of what we're doing here.  Other bits will have to be written entirely from scratch, and that's OK.
+
+	  <h2>So, what about these sub-projects?</h2>
+
+	  <ul>
+	    <li>
+	      <a href="http://fogbeam.github.io/Neddick">Neddick</a>
+	      <p>
+		Neddick is an Open Source Information Discovery Platform, based on Groovy & Grails, and making up one component of the Fogcutter Suite. Neddick shares an approach to information discovery with consumer facing websites like Reddit, Digg, and other aggregator applications. You could call Neddick "Reddit for the Enterprise" but that would be oversimplifying a bit. Neddick is intended mainly for organizational use and therefore has features that Reddit lacks, but, in turn, lacks certain things that Reddit has. But Reddit was absolutely our inspiration for Neddick and you'll notice the commonality almost immediately.
+	      </p>
+	      <p>
+		Relative to Reddit, Neddick adds features like:
+		<ul>
+		  <li>Channels can subscribe to RSS feeds - any "channel" in Neddick (roughly equivalent to a Sub-Reddit on Reddit) can link to 0 or more RSS feeds, and the channel will automatically be populated from those feeds on a scheduled basis.
+		  </li><li>Tags - Neddick supports the application of arbitrary tags to entries, and provides each user a view of the tags they have used, to enable rapid access to specific content.
+		  </li>
+		  <li>
+		    Channel Filters - Filters allow you to filter your view of a channel based on criteria including: body keyword, title keyword, score, and tags.
+		  </li>
+		  <li>
+		    More powerful "sharing" capability - Neddick supports sharing content by email, XMPP, and HTTP POST.
+		  </li>
+		  <li>
+		    ActivityStrea.ms support - Neddick can HTTP POST entries to remote endpoints in ActivityStrea.ms format. This is how we built our integration with Quoddy - the Enterprise Social Network component of the Fogcutter Suite.
+		  </li>
+		  <li>
+		    Channel Triggers - Triggers allow a user to specify actions to occur when Entry related events occur which match criteria which may include: A new Entry is posted which matches a body keyword or title keyword, an Entry is voted up past a specified score threshold, or a specified tag is applied to an Entry. Trigger actions include sharing via email, XMPP and HTTP post, and in future releases will be extend to include sending JMS messages, launching workflows via BPM integration, and running user provided scripts.
+		  </li>
+		</ul>
+	      </p>
+
+	    </li>
+	    <li>
+	      <a href="http://fogbeam.github.io/Quoddy">Quoddy</a>
+	      <p>
+		Quoddy is an Open Source Enterprise Social Network, based on Groovy & Grails, and making up one component of the Fogcutter Suite. Quoddy shares a common "look and feel", and substantial functionality, with consumer facing Social Networks like Facebook or Google+ as well as proprietary Enterprise Social Network products like the products from Jive Software and Yammer among others. You could call Quoddy "Facebook for the Enterprise" but that would be oversimplifying a bit. Quoddy is intended mainly for organizational use and therefore has capabilities which make it uniquely suited to provide the social fabric to support organizational knowledge sharing, knowledge transfer, collaboration and decision support.
+	      </p>
+	      <p>
+		Relative to consumer Social Networks and other Enterprise Social Networking products, Quoddy adds features like:
+
+		<ul>
+		  <li>
+		    Calendar Feed Subscriptions - Quoddy supports subscriptions to any calendaring server which provides an iCal feed, so you can see your upcoming events rendered in your feed alongside other important events. Future releases will support CalDAV and interactive editing of Calendar Events from right in the stream.
+		  </li>
+		  <li>
+		    RSS/Atom Feed Subscriptions - Quoddy supports subscriptions to any arbitrary RSS feed, so you can find crucial information in your feed. Subscribe to internal blog servers, document management systems, wikis, and any other repository which provides RSS, or subscribe to your favorite blogs, Google Alerts, and other external information sources.
+		  </li>
+		  <li>
+		    Business Events Subscriptions - using the Hatteras Business Events Subscription engine, Quoddy allows users to define subscriptions to business events right off of the enterprise SOA/ESB backbone. Find out exactly what is going on in your enterprise, in real-time with Quoddy and Hatteras.
+		  </li>
+		  <li>
+		    BPM Integration - Quoddy supports subscribing to User Tasks from BPM / Workflow engines. We currently only support Activiti, the leading Open Source BPM offering, but support for other workflow products will be coming in future releases.
+		    Fine-grained User Stream definitions. Quoddy provides robust support for creating different "user stream" definitions, which filter content by type, source, group, or other criteria, and makes it trivially easy to quickly change the current Stream. For example, you may tke a quick peek at an enterprise-wide view of all the activity from every user, and then quickly switch back to a personalized view which includes only your BPM User Tasks. Quoddy emphasizes putting you in control of the content which is rendered in your stream, helping avoid information overload.
+		  </li>
+		  <li>
+		    ActivityStrea.ms protocol support using REST. Quoddy exposes a HTTP interface for external systems to post ActivityStrea.ms messages. This allows our integration with Neddick as well as other 3rd party products.
+		  </li>
+		</ul>
+	      </p>
+
+	    </li>
+	    <li><a href="http://fogbeam.github.io/Heceta">Heceta</a> - a search engine that leverages all of the various bits of information from Neddick, Quoddy, and "TBD" to provide better / deeper / more insightful search results than you can get from simple document content analysis.  Intranet search in the Enterprise usually sucks, largely because page-rank type algorithms don't work well due to the lack of links between documents.  But by supplementing the content analysis with scoring based on tags, social graph connections, activity-stream information, etc., it should be possible to do a much better job.  This is not, by the way, a totally novel idea.  It's something people are referring to as <a href="http://en.wikipedia.org/wiki/Social_search">Social Search</a>.
+	    </li>
+
+	    <li>
+	      <a href="http://fogbeam.github.io/Hatteras">Hatteras</a>
+	      <p>
+		Hatteras is an Open Source Business Events Subscription Engine, written in Java and making extensive use of Apache Camel, which makes up one component of the Fogcutter Suite. Hatteras works with Quoddy to provide the capability for users to create Subscriptions to Business Events on the organizations ESB infrastructure. Hatteras connects to Quoddy, downloads all defined Subscriptions, and then listens for matching messages. Messages which match a Subscription are persisted to an XML database and Hatteras then sends a notification to Quoddy which creates a Subscription Item record which can be rendered in the user's stream. Quoddy and Hatteras thereby provide seamless access to important business events, alongside other import pieces of content the user has selected.
+	      </p>
+	      <p>
+		Future versions will focus on better administrative tools, and more hooks to provide interoperability in your unique environment. Over time, Quoddy, Hatteras and other Fogcutter products will add a powerful Event Stream Processing / Complex Event Processing capability to correlate events and provide deep analysis for powerful business insights. Over time, we will surface the capability to provide correlation between Events, People, and Content (Documents) and will offer the ability to quickly navigate in any direction, between the nodes in a graph of related entities which have causal, topical, or temporal relationships with each other.
+	      </p>
+	    </li>
+
+	  </ul>
+
+	  Of course since this is all intended for an enterprise setting, a big focus will be on integrating with other systems  (see the point about "open protocols" and "open standards" above).
+
+	  Previous discussion of <a href="http://code.google.com/p/neddick/">Neddick</a> mentions discovering documents and people, despite the screen shots only showing stuff about links so far.  That's where  integration comes into play... part of the vision is to integrate with, for example, a document management system  like <a href="http://forge.alfresco.com/">Alfresco</a>, a forum system like <a href="https://jforum.dev.java.net/">JForum</a>, a groupware / calendar system, a HRM system like <a href="http://code.google.com/p/orangehrm/">OrangeHRM</a> and/or a social-networking application like <a href="http://code.google.com/p/quoddy/">Quoddy</a>.
+
+	  That, of course, also plays into the vision for Heceta, which is all about searching across  all the different domains, and using the knowledge aggregated across all of them, to enhance our search capability.
+
+	  <h2>Is there a demo site or something?</h2>
+
+	  Yes, there is a Neddick technology preview at [http://demo.fogbeam.org:8080/neddick1/]
+	  and a Quoddy technology preview at [http://demo.fogbeam.org:8080/quoddy]
+
+	  A preview of Heceta will be along later.
+
+	  <h2>News</h2>
+
+	  Fogcutter Synchronized Release "418 Teapot" is released as of 08-25-2013.  This release features the 4th "tech preview release" of Neddick, and the first public releases of Quoddy and Hatteras.  See <a href="http://fogcutterdev.blogspot.com/2013/08/ann-fogcutter-suite-synchronized.html">http://fogcutterdev.blogspot.com/2013/08/ann-fogcutter-suite-synchronized.html</a> for more details.
+
+	  <h2>Is there some sort of "roadmap" or project plan?</h2>
+
+	  Yes.  See the [http://code.google.com/p/fogcutter/wiki/Roadmap roadmap page] for details.
+
+	  More information about detailed plans for adding features and/or fixing bugs can be found in [http://dev.fogbeam.org/bugzilla/ Bugzilla]  and/or [http://dev.fogbeam.org:8080/icescrum-web-R2/ Icescrum].
+
+	  <h2>Is Commercial Support Available?</h2>
+
+	  Yes, from <a href="http://www.fogbeam.com">Fogbeam Labs</a>.  See the <a href="http://www.fogbeam.com/fogcutter_enterprise.html">Fogcutter Enterprise</a> page for more details.
+
+
+
+
+
+
+
+
+
+
+
+
+	  
         </section>
 
         <footer>
