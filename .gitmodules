@@ -1,3 +1,6 @@
 [submodule "Quoddy"]
 	path = Quoddy
 	url = https://github.com/fogbeam/Quoddy
+[submodule "Neddick"]
+	path = Neddick
+	url = https://github.com/fogbeam/Neddick
