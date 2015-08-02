@@ -1,0 +1,3 @@
+[submodule "Quoddy"]
+	path = Quoddy
+	url = https://github.com/fogbeam/Quoddy
