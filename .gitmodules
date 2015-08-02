@@ -7,3 +7,6 @@
 [submodule "Heceta"]
 	path = Heceta
 	url = https://github.com/fogbeam/Heceta
+[submodule "Hatteras"]
+	path = Hatteras
+	url = https://github.com/fogbeam/Hatteras
