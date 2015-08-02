@@ -1,0 +1,3 @@
+[submodule "Hatteras"]
+	path = Hatteras
+	url = https://github.com/fogbeam/Hatteras
