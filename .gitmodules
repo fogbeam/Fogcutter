@@ -4,3 +4,6 @@
 [submodule "Neddick"]
 	path = Neddick
 	url = https://github.com/fogbeam/Neddick
+[submodule "Heceta"]
+	path = Heceta
+	url = https://github.com/fogbeam/Heceta
